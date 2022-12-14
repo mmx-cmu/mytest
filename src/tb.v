@@ -10,6 +10,7 @@ module tb (
     // testbench is controlled by test.py
     input clk,
     input rst,
+    input [6:0] mul_val,
     output [7:0] outputs
    );
 
@@ -21,9 +22,9 @@ module tb (
     end
 
     // wire up the inputs and outputs
-    wire [7:0] inputs = {6'b0, rst, clk};
+    wire [7:0] inputs = {mul_val, clk};
 
     // instantiate the DUT
-    mmx_chip dut(.io_in (inputs), .io_out(outputs));
+    mmx_chip dut(.io_in(inputs), .io_out(outputs));
 
 endmodule
