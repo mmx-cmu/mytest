@@ -3,9 +3,8 @@
 project:
   wokwi_id:    0        # If using wokwi, set this to your project's ID
   source_files:        # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. Source files must be in ./src
-    - counter.v
-    - decoder.v
-  top_module:  "seven_segment_seconds"      # put the name of your top module here, make it unique by prepending your github username
+    - chip.v
+  top_module:  "mmx_chip"      # put the name of your top module here, make it unique by prepending your github username
 
 # As everyone will have access to all designs, try to make it easy for someone new to your design to know what
 # it does and how to operate it.
@@ -35,12 +34,11 @@ documentation:
     - none
     - none
   outputs:
-    - segment a         # a description of what the outputs do
-    - segment b
-    - segment c
-    - segment d
-    - segment e
-    - segment f
-    - segment g
-    - none
-
+    - counter bit 0         # a description of what the outputs do
+    - counter bit 1
+    - counter bit 2
+    - counter bit 3
+    - counter bit 4
+    - counter bit 5
+    - counter bit 6
+    - counter bit 7
