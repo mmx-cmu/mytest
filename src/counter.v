@@ -26,10 +26,10 @@ module seven_segment_seconds #( parameter MAX_COUNT = 1000 ) (
                 second_counter <= 0;
 
                 // increment digit
-                digit <= digit + 1'b1;
+                digit <= digit + 2'b2;
 
                 // only count from 0 to 9
-                if (digit == 9)
+                if (digit >= 9)
                     digit <= 0;
 
             end else
